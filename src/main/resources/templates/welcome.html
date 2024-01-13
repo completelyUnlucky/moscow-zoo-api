@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${kind}"></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Moscow Zoo API</h1>
+    <div class="input-container">
+        <form th:action="@{/find}" method="post">
+            <label>
+                <input type="text" id="inputValue" name="inputValue" placeholder="ID животного"/>
+            </label>
+        </form>
+    </div>
+    <a href="/id-list" class="back-link">Список ID</a>
+</header>
+<section class="animal-details">
+    <div class="content-left">
+        <p><h1>Добро пожаловать на API Московского зоопарка!</h1>
+        <br>
+        <p>
+            Московский зоопарк, основанный более ста лет назад, является одним из самых знаменитых и посещаемых зоопарков
+            в России. С его обширной территорией в 53 гектара, зоопарк предлагает уникальную возможность увидеть более 8 000
+            животных, представленных в коллекции более 500 видов.
+        </p>
+        <p>
+            Посетители могут насладиться разнообразием экзотических животных, начиная от тигров и слонов, и заканчивая
+            редкими видами птиц и рептилий. В зоопарке также существует специальная область для местных животных, где
+            можно увидеть различных представителей фауны России.
+        </p>
+
+        Ссылка на официальный сайт Московского зоопарка: <a href="https://www.moscowzoo.ru">moscowzoo.ru/</a>
+        <p>Ссылка на открытый репозиторий проекта: <a href="https://www.github.com/completelyUnlucky/moscow-zoo-api">
+            github.com/completelyUnlucky/moscow-zoo-api</a></p>
+
+    </div>
+    <div class="content-right">
+        <img src="https://moya-planeta.ru/upload/images/xl/c5/1e/c51e9447971dcd50f3c85d4f20c8dafd717f7f22.jpg"
+             alt="Photo upload error :(">
+    </div>
+</section>
+</body>
+</html>

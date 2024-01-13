@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.back-link {
+    transform: translateY(-50%);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #65d67a;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.back-link:hover {
+    background-color: #4CAF50;
+}
+
+header {
+    justify-content: space-between;
+    border-radius: 0 0 22px 22px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    animation: colorChange 8s infinite alternate;
+}
+
+@keyframes colorChange {
+    from {
+        background-color: #1bcf22;
+    }
+    to {
+        background-color: #06a124;
+    }
+}
+
+h1 {
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.main-content {
+    background-color: #DFF0D8;
+    padding: 20px;
+    text-align: center;
+}
+
+.input-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.animal-details {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #DFF0D8;
+    padding: 20px;
+    margin: 20px;
+    animation: scaleUp 2s ease-in-out;
+}
+
+.content-left {
+    text-align: left;
+    flex: 1;
+}
+
+.content-right {
+    flex: 1;
+    padding: 20px;
+    text-align: right;
+}
+
+.textarea-container {
+    margin: 20px;
+    animation: slideIn 2s forwards;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-size: 16px;
+    animation: fadeIn 2s forwards;
+}
+
+.image-container {
+    margin-top: 20px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}

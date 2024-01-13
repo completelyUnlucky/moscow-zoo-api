@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список ID</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Moscow Zoo API</h1>
+    <div class="input-container">
+        <form th:action="@{/find}" method="post">
+            <label>
+                <input type="text" id="inputValue" name="inputValue" placeholder="ID животного"/>
+            </label>
+        </form>
+    </div>
+    <a href="javascript:history.back()" class="back-link">Назад</a>
+</header>
+<section class="animal-details">
+    <table>
+        <thead>
+        <tr>
+            <th>Животное</th>
+            <th>ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="entry : ${ids}">
+            <td th:text="${entry.key}">      </td>
+            <td th:text="${entry.value}"></td>
+        </tr>
+        </tbody>
+    </table>
+<!--    <p th:text="${ids}"></p>-->
+</section>
+</body>
+</html>

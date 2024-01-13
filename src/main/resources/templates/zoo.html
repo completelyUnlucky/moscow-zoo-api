@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${kind}"></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Moscow Zoo API</h1>
+    <div class="input-container">
+        <form th:action="@{/find}" method="post">
+            <label>
+                <input type="text" id="inputValue" name="inputValue" placeholder="ID животного"/>
+            </label>
+        </form>
+    </div>
+    <a href="/id-list" class="back-link">Список ID</a>
+</header>
+<section class="animal-details">
+    <div class="content-left">
+        <h2 th:text="${kind}"></h2>
+        <p th:text="${info}"></p>
+        <p th:text="${cage_location}"></p>
+    </div>
+    <div class="content-right">
+        <img th:src="${photo}" alt="Photo upload error :(" src="">
+    </div>
+</section>
+</body>
+</html>
